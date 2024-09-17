@@ -5,12 +5,12 @@ import { useState } from 'react';
 
 function Counter () {
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
 
-  const onMinus = () => {
+  const onMinus = ():void => {
     setCount((prevValue)=> prevValue-1);
    };
-   const onPlus = () => {
+   const onPlus = ():void => {
     setCount((prevValue)=> prevValue+1);
    };
 
