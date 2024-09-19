@@ -1,8 +1,9 @@
 import './styles.css';
 
 import Button from '../../components/Button/Button';
+import { CounterProps } from './types';
 
-function Counter ({countValue, onMinusClick, onPlusClick}:any) {
+function Counter ({countValue, onMinusClick, onPlusClick}:CounterProps) {
 
   return(
     <div className='counter-wrapper'>
