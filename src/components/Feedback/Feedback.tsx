@@ -1,24 +1,25 @@
-import { useState } from 'react';
+
 import Button from '../Button/Button';
-import './styles.css';
+import './styles.ts';
 import { FeedbackProps } from './types';
+import { FeedbackContainer, FeedbackResultContainer, LikeResultContainer, Result } from './styles';
 
 function Feedback({like = 0 , dislike = 0,addLike, addDislike, resetResult}:FeedbackProps) {
 
 
 return (
-<div className='feedback-container'> 
-<div className='feedback-result-container'>
-<div className='like-result-container'> 
+<FeedbackContainer> 
+<FeedbackResultContainer>
+<LikeResultContainer> 
   <Button name="Like" onButtonClick={addLike}/>
-    <div className='result'>{like}</div></div> 
-<div className='like-result-container'>
+    <Result>{like}</Result></LikeResultContainer> 
+<LikeResultContainer>
     <Button name="Dislike" onButtonClick={addDislike}/>
-<div className='result'>{dislike}</div>
-</div>
-</div>
+<Result>{dislike}</Result>
+</LikeResultContainer>
+</FeedbackResultContainer>
 <Button name="Reset results" onButtonClick={resetResult}/>
-</div>
+</FeedbackContainer>
 )
 }
 
