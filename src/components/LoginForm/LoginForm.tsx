@@ -7,7 +7,7 @@ function LoginForm() {
     <div className="loginform-wrapper">
       <p className="loginform-name">Login form</p>
       <div className="inputs-container">
-        <Input
+        {/* <Input
           name="login-email"
           type="email"
           placeholder="Enter your email"
@@ -18,7 +18,7 @@ function LoginForm() {
           type="password"
           placeholder="Enter your password"
           label="Password"
-        />
+        /> */}
       </div>
       <Button type="submit" name="Login" />
     </div>
